@@ -1,6 +1,8 @@
 import React from "react";
 import  galaxys8 from "./phones/galaxys8.png";
 import styles from "./mystyle.module.css";
+import {Component} from "react";
+
 /*
 const imgStyle = {
     maxWidth: '50%',
@@ -10,12 +12,24 @@ const imgStyle = {
 
  */
 
+export interface ImageProps{
+    //object?: 'Samsung Galaxy S8'| 'none'
+    name:string
+    height: number
+    width: number
+    url?: string
 
-function Image  () {
-    return(
-        <div>
-            <img className={styles.root} src={galaxys8} alt = "galaxy-s8"/>
-        </div>
-    )
+};
+
+
+class Image extends Component {
+    render() {
+        return (
+            <div>
+
+                <img className={styles.root} src={this.props.path} alt="galaxy-s8"/>
+            </div>
+        )
+    }
 }
 export default Image;

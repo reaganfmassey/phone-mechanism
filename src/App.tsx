@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "./Image";
+import ImageProps from "./Image";
 import { Grid } from '@material-ui/core';
 
 
@@ -26,13 +27,22 @@ const imgStyle = makeStyles( {
     }
 });
 */
+
+
 function App() {
+    const phone : ImageProps = {
+        //object: 'Samsung Galaxy S8',
+        name:"galaxys8",
+        height: 148.9,
+        width: 68.1,
+
+    };
   return (
     <div className="App">
         <Grid  item xs = {8}>
-            <Image/>
+           menu
         <Grid item xs={4}>
-            < Image/>
+            <Image path = {phone.name}/>
 
         </Grid>
 

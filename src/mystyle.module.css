@@ -1,0 +1,11 @@
+
+.root {
+    left-padding: 30px;
+    position: absolute;
+    top: 800px;
+    right: 0;
+    maxWidth: 100%;
+    maxHeight: 680px;
+    bottom: 5px;
+    left: 10000px;
+}

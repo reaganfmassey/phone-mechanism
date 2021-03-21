@@ -28,10 +28,9 @@ const imgStyle = makeStyles( {
 });
 */
 
-
 function App() {
     const phone : ImageProps = {
-        //object: 'Samsung Galaxy S8',
+        object: 'Samsung Galaxy S8',
         name:"galaxys8",
         height: 148.9,
         width: 68.1,
@@ -42,7 +41,7 @@ function App() {
         <Grid  item xs = {8}>
            menu
         <Grid item xs={4}>
-            <Image path = {phone.name}/>
+            <Image path = />
 
         </Grid>
 

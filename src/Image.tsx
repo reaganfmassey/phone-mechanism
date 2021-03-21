@@ -26,8 +26,7 @@ class Image extends Component {
     render() {
         return (
             <div>
-
-                <img className={styles.root} src={this.props.path} alt="galaxy-s8"/>
+                <img className={styles.root} src={this.props.name} alt="galaxy-s8"/>
             </div>
         )
     }

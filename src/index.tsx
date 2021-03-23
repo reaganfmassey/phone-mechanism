@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Image from './Image';
+// eslint-disable-next-line
+import  galaxys8 from "./phones/galaxys8.png";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Image name = 'galaxys8'/>
   </React.StrictMode>,
   document.getElementById('root')
 );

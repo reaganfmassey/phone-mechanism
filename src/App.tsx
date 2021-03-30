@@ -1,53 +1,68 @@
-import React from 'react';
-import Image from "./Image";
-import ImageProps from "./Image";
-import { Grid } from '@material-ui/core';
+import React, {FC} from "react";
+// eslint-disable-next-line
+import galaxys8 from "./phones/galaxys8.png";
+// eslint-disable-next-line
+import styles from "./mystyle.module.css";
+import ReactDOM from "react-dom";
+import {Grid} from '@material-ui/core';
+import {useState} from 'react';
 
 
-/*const useStyles = makeStyles() => ({
-    root: {
-        backgroundColor: theme.palette.background.dark,
-        minHeight: '100%',
-        paddingTop: theme.spacing(3),
-        paddingBottom: 100
-    }
-}));
-
-
-const imgStyle = makeStyles( {
-    root: {
-        leftPadding: '30px',
-        //position: absolute,
-        top: '800px',
-        right: 0,
-        maxWidth: '100%',
-        maxHeight: '680px',
-        bottom: '5px',
-        left: '10000px',
-    }
-});
-*/
-
-function App() {
-    const phone : ImageProps = {
-        object: 'Samsung Galaxy S8',
-        name:"galaxys8",
-        height: 148.9,
-        width: 68.1,
-
-    };
-  return (
-    <div className="App">
-        <Grid  item xs = {8}>
-           menu
-        <Grid item xs={4}>
-            <Image path = />
-
-        </Grid>
-
-        </Grid>
-    </div>
-  );
+/*
+const imgStyle = {
+    maxWidth: '50%',
+    height: 'auto',
+    display: 'inlineBlock',
 }
 
-export default App;
+ */
+
+export interface ImageProps {
+    //object?: 'Samsung Galaxy S8'| 'none'
+    name: string;
+    // height: number
+    //width: number
+    url?: string;
+    path: string;
+
+};
+
+const Image = ({name, path}: ImageProps) => {
+    //const classes = useStyles();
+    const [select, changeImage] = useState(false);
+
+
+    return (
+        <div>
+            <img className={name} src={path} alt="galaxy-s8"/>
+        </div>
+
+    );
+}
+
+
+const element = <div>
+    <Grid item xs={8}>
+        menu
+        <Grid item xs={4}>
+            <Image name="galaxys8" path={'galaxys8'} />
+        </Grid>
+    </Grid>
+</div>;
+ReactDOM.render(
+    element,
+    document.getElementById('root')
+);
+
+/*
+class Image extends React.Component {
+    render() {
+        return (
+            <div>
+                <img className={this.props.name} src={this.props.path} alt="galaxy-s8"/>
+            </div>
+        )
+    }
+*/
+
+export default Image;
